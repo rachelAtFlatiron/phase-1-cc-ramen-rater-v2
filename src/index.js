@@ -1,5 +1,21 @@
 /*
   TESTING COMMENT CHANGES
+  IF YOU WERE TO PAIR PROGRAM
+  person 1: types -> commits -> pushes changes to remote (github.com)
+  person 2: pull changes from remote (from github.com) -> types -> commits -> push changes to remote (github.com)
+
+  EACH WORKING ON YOUR OWN BRANCH
+  **MAIN IS ALWAYS SUPPOSED TO BE A WORKING BRANCH
+  **MERGE MAIN INTO YOUR BRANCH SO YOU KNOW THERE ARE NO CONFLICTS
+  **MAKE SURE MAIN IS ALWAYS UP TO DATE
+  1. make changes on your branch
+  2. commit them
+  3. merge main into your branch
+  4. make sure everything works, all conflicts are resolved, everything is as expected, etc.
+  5. push your branch changes to remote (github.com)
+  6. switch back to main
+  7. merge your branch into main
+  8. push local changes in main to remote (github.com)
 */
 
 // index.js
