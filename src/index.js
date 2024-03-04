@@ -1,11 +1,11 @@
 // index.js
 const ramenMenu = document.getElementById('ramen-menu')
 const ramenForm = document.getElementById('new-ramen')
-const editForm = document.getElementById('edit-ramen')
+const formToEdit = document.getElementById('edit-ramen')
 const detailImg = document.querySelector('.detail-image')
 const detailName = document.querySelector('.name')
-const detailRestaurant = document.querySelector('.restaurant')
-const detailRating = document.querySelector('#rating-display')
+const restaurant = document.querySelector('.restaurant')
+const rating = document.querySelector('#rating-display')
 const detailComment = document.querySelector('#comment-display')
 //curRamen also aligns with ramen.id
 let curRamen = 0
@@ -19,8 +19,8 @@ const handleClick = (ramen) => {
   
   detailImg.src = ramen.image 
   detailName.textContent = ramen.name 
-  detailRestaurant.textContent = ramen.restaurant 
-  detailRating.textContent = ramen.rating 
+  restaurant.textContent = ramen.restaurant 
+  rating.textContent = ramen.rating 
   detailComment.textContent = ramen.comment
 };
 
@@ -29,8 +29,8 @@ const deleteRamen = () => {
   detailImg.src = undefined 
   detailComment.textContent = "" 
   detailName.textContent = "" 
-  detailRestaurant.textContent = "" 
-  detailRating.textContent = "" 
+  restaurant.textContent = "" 
+  rating.textContent = "" 
 
   //remove from menu
   //1. compare curRamen (ramen.id) to menu img's id (ramen.id)
@@ -66,7 +66,7 @@ const addSubmitListener = (e) => {
 const editSubmitListener = (e) => {
   e.preventDefault()
   detailComment.textContent = e.target["new-comment"].value 
-  detailRating.textContent = e.target.rating.value
+  rating.textContent = e.target.rating.value
   //PATCH request might be nice 
   
 }
@@ -108,7 +108,7 @@ const main = () => {
   .then(ramen => {
     handleClick(ramen)
   })
-  editForm.addEventListener('submit', (e) => editSubmitListener(e))
+  formToEdit.addEventListener('submit', (e) => editSubmitListener(e))
   //add delete button 
   const deleteButton = document.createElement('button')
   deleteButton.textContent = "Delete"
