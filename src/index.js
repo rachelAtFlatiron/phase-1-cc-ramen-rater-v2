@@ -1,3 +1,7 @@
+/*
+  TESTING COMMENT CHANGES
+*/
+
 // index.js
 const ramenMenu = document.getElementById('ramen-menu')
 const ramenForm = document.getElementById('new-ramen')
@@ -94,6 +98,7 @@ const displayRamens = () => {
 
 const main = () => {
   // Invoke displayRamens here
+
   displayRamens()
   // Invoke addSubmitListener here
   ramenForm.addEventListener('submit', (e) => addSubmitListener(e))
@@ -116,7 +121,7 @@ const main = () => {
   deleteButton.addEventListener('click', () => {deleteRamen()})
 }
 
-main()
+document.addEventListener('DOMContentLoaded', () => main())
 
 // Export functions for testing
 export {
